@@ -1,18 +1,34 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Duck : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] float swimSpeed;
+    [SerializeField] float munchRadius;
 
-    // Update is called once per frame
+    private Bread target;
+
     void Update()
     {
-        
+        if (target == null)
+        {
+            Bread snacc = FindObjectOfType<Bread>();
+            if (snacc != null)
+            {
+                target = snacc;
+            }
+        }
+
+        if (target != null)
+        {
+            if (Vector3.Distance(transform.position, target.transform.position) < munchRadius)
+            {
+                target.Munch();
+                target = null;
+                return;
+            }
+
+            transform.LookAt(target.transform, Vector3.up);
+            transform.position += Vector3.Normalize(target.transform.position - transform.position) * swimSpeed * Time.deltaTime;
+        }
     }
 }
