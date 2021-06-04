@@ -4029,11 +4029,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4945347196651572212, guid: 2dfaade91432f4b73ad660993ed96aa8,
-        type: 3}
-      propertyPath: breadHungerAmount
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 5119944107562883273, guid: 2dfaade91432f4b73ad660993ed96aa8,
         type: 3}
       propertyPath: m_RootOrder

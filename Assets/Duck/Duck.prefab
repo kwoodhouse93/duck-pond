@@ -51,7 +51,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hungerRate: 1
   starvationHungerLevel: 100
+  reallyHungryLevel: 70
   satiatedHungerLevel: 10
+  breadHungerAmount: 1
   swimSpeed: 2
   munchRadius: 0.1
 --- !u!1 &5119944108151478133
